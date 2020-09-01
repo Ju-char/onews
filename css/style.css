@@ -76,12 +76,15 @@ section {
 }
 
 .news {
-    background-color: rgba(255, 255, 255, 0.2);
     display: flex;
     flex-direction: column;
     align-items: flex-end;
     text-align: right;
     padding: 1.8em 1.1em;
+}
+
+.news--nicole {
+    background-color: rgba(255, 255, 255, 0.2);
     box-shadow: .5px .5px 1px #aaa;
 }
 
@@ -222,4 +225,85 @@ section {
 
 .article__detail:hover {
     color: #0056b3;
+}
+
+/* FORMULAIRE */
+#right-side #contact {
+    background-color: #fff;
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+}
+
+#form {
+    padding: 2em;
+    margin: 2em;
+    border: 1px solid #eaeaea;
+}
+  
+#form fieldset {
+    border-left: 1px solid #4cced3;
+    padding: .5em 1em 0;
+    margin-bottom: 2em;
+}
+#form legend {
+    margin-left: -.3em;
+    font-size: 1.1em;
+}
+  
+.form-row {
+    display: flex;
+    margin-bottom: .4em;
+}
+  
+.form-row .label {
+    flex-basis: 30%;
+    margin: 0;
+    padding-right: 3%;
+}
+  
+  /* tous les enfants direct d'un élément ayant la class form-row */
+  /* sauf les .label, vu qu'ils ont des règles plus spécifiques définies juste au dessus 😉 */
+.form-row > * {
+    flex-basis: 70%;
+}
+  
+.input-group {
+    display: flex;
+    align-items: center;
+}
+  
+.input-group > * {
+    margin: 0 .5em 0 0;
+}
+  
+  /* moche mais bon, sinon la cochette prend toute la largeur (enfin, 70%), pas sûr que ça rende bien sur tous les navigateurs 🤔 */
+#info {
+    flex-basis: 1em;
+}
+  
+#contact input[type=text],
+#contact input[type=email],
+#contact textarea,
+#contact select {
+     background-color: #f9f9f9;
+    border: none;
+    border-bottom: 1px solid #4cced3;
+}
+#contact input[type=email] {
+    width: 100%;
+}
+#contact textarea {
+    padding: .2em;
+    width: 100%;
+}
+#contact button {
+    background-color: #4cced3;
+    color: white;
+    font-weight: 700;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.3em;
+    padding: 5px 10px;
 }

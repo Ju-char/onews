@@ -28,74 +28,67 @@
             </section>
             <section id="right-side">
                 <header>
-                    <h1 class="title">Latests news</h1>
+                    <h1 class="title">Contact</h1>
                 </header>
-                <main>
-                    <article class="article">
-                        <span class="article__badge badge--news">NEWS</span>
-                        <h2 class="article__title">Lorem ipsum dolor sit amet</h2>
-                        <div class="article__meta">
-                            <img class="meta__icon" src="../images/icon-john.png" alt="John Marchill">
-                            <strong class="meta__author">John Marchill</strong>
-                            <span class="meta__date">le 21 Juillet 2019</span>
-                        </div>
-                        <p class="article__text">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque scelerisque suscipit nibh quis porttitor. Voilà, je tenais à le dire.</p>
-                        <a href="#" class="article__detail">Continue reading</a>
-                    </article>
-                    <article class="article">
-                        <span class="article__badge badge--team">team</span>
-                        <h2 class="article__title">Le pair programming pour les n00bs</h2>
-                        <div class="article__meta">
-                            <img class="meta__icon" src="../images/icon-dar.png" alt="Paul Darson">
-                            <strong class="meta__author">Paul Darson</strong>
-                            <span class="meta__date">le 2 Août 2019</span>
-                        </div>
-                        <p class="article__text">Le pair programming pour les dévs, c'est un peu comme certains fromages : c'est mieux à deux.</p>
-                        <a href="#" class="article__detail">Continue reading</a>
-                    </article>
-                    <article class="article">
-                        <span class="article__badge badge--work">work</span>
-                        <h2 class="article__title">Pourquoi j'aime JS</h2>
-                        <div class="article__meta">
-                            <img class="meta__icon" src="../images/icon-ohz.png" alt="Bruce Ékoute">
-                            <strong class="meta__author">Bruce Ékoute</strong>
-                            <span class="meta__date">le 7 Août 2019</span>
-                        </div>
-                        <p class="article__text">JavaScript est un langage très particulier, c'est indéniable. Je vous propose de faire le tour de toutes ces petites choses simples qui lui donnent une saveur si unique.</p>
-                        <a href="#" class="article__detail">Continue reading</a>
-                    </article>
-                    <article class="article">
-                        <span class="article__badge badge--team">team</span>
-                        <h2 class="article__title">La situation de scribe</h2>
-                        <div class="article__meta">
-                            <img class="meta__icon" src="../images/icon-spr.png" alt="Otis">
-                            <strong class="meta__author">Otis</strong>
-                            <span class="meta__date">le 5 Septembre 2019</span>
-                        </div>
-                        <p class="article__text">Mais, vous savez, moi je ne crois pas qu'il y ait de bonne ou de mauvaise situation. Moi, si je devais résumer ma vie aujourd'hui avec vous, je dirais que c'est d'abord des rencontres, des gens qui m'ont tendu la main, peut-être à un moment où je ne pouvais pas, où j'étais seul chez moi. Et c'est assez curieux de se dire que les hasards, les rencontres forgent une destinée...</p>
-                        <a href="#" class="article__detail">Continue reading</a>
-                    </article>
-                    <article class="article">
-                        <span class="article__badge badge--work">work</span>
-                        <h2 class="article__title">Le travail : pourquoi ce n'est jamais naturel ?</h2>
-                        <div class="article__meta">
-                            <img class="meta__icon" src="../images/icon-tr.png" alt="Trouveur d'Éperon de Wyverne">
-                            <strong class="meta__author">Trouveur d'Éperon de Wyverne</strong>
-                            <span class="meta__date">le 6 Septembre 2019</span>
-                        </div>
-                        <p class="article__text">Le terme "travail" vient du latin "trepalium" qui signifie "torture". Voilà, je vous laisse avec ça.</p>
-                        <a href="#" class="article__detail">Continue reading</a>
-                    </article>
-                    <article class="article">
-                        <span class="article__badge badge--news">news</span>
-                        <h2 class="article__title">Les chats augmentent la longévité</h2>
-                        <div class="article__meta">
-                            <img class="meta__icon" src="../images/icon-tre.png" alt="Rincevent">
-                            <strong class="meta__author">Rincevent</strong>
-                            <span class="meta__date">le 27 Septembre 2019</span>
-                        </div>
-                        <p class="article__text">Jusqu'à un certain nombre. Au delà de 28 chats, les scientifiques semblent quelque peu sceptiques. Surtout sur l'aspect budgétaire...</p>
-                        <a href="#" class="article__detail">Continue reading</a>
+                <main id="contact">
+                    <article>
+                        <form id="form" action="">
+                            <!-- il faudrait pouvoir grouper ces champs car ils traitent du même sujet -->
+                            <!-- et "étiqueter" ce groupe : Identité -->
+                            <fieldset>
+                                <legend>Identité</legend>
+                                <div class="form-row">
+                                    <p class="label">Je suis</p>
+                                    <div class="input-group">
+                                        <!-- ici, un petit bouton "switch" (l'un ou l'autre), celui-là serait coché par défaut -->
+                                        <label for="civilite-2">une femme</label>
+                                        <span>/</span>
+                                        <!-- là, le deuxième -->
+                                        <label for="civilite-1">un homme</label>
+                                    </div>
+                                </div>
+                                <div class="form-row">
+                                    <label class="label" for="prenom">Mon prénom est </label>
+                                    <!-- un champ texte tout bidon, mais avec Prénom écrit dedans -->
+                                </div>
+                                <div class="form-row">
+                                    <label class="label" for="nom">Et mon nom, </label>
+                                    <!-- le même, avec Nom dedans -->
+                                </div>
+                                <div class="form-row">
+                                    <label class="label" for="source">J'ai connu ce site grâce à </label>
+                                    <!-- là, une petite liste de sources, mais faut pas que ça prenne trop de place, elle pourrait évoluer avec le temps -->
+                                </div>
+                            </fieldset>
+                            <!-- </groupe de champs> -->
+                            <!-- deuxième groupe de champs : celui du message -->
+                            <!-- Idem, un petit libellé pour guider l'utilisateur 👌 -->
+                            <fieldset>
+                                <legend>Message</legend>
+                                <div class="form-row">
+                                    <label class="label" for="email">Répondez-moi via</label>
+                                    <!-- un champ pour l'adresse e-mail (mais vraiment pour une adresse e-mail, faut pas qu'on puisse rentrer n'importe quoi dedans) -->
+                                </div>
+                                <div class="form-row">
+                                    <label class="label" for="message">Je voulais vous dire que</label>
+                                    <!-- une belle zone de texte pour pouvoir nous écrire tout un roman 😍 -->
+                                </div>
+                                <div class="form-row">
+                                    <label class="label" for="file">Et vous montrer ça aussi</label>
+                                    <!-- il parait qu'on peut envoyer des fichiers, make it happen -->
+                                </div>
+                            </fieldset>
+                            <!-- </groupe de champs> -->
+                            <!-- Là, c'est plus pour la distinction visuelle mais faudrait aussi créer un groupe... de 1 🤷 -->
+                            <fieldset>
+                                <div class="form-row">
+                                    <label class="label" for="info">Je certifie la véracité de ces informations.</label>
+                                    <!-- là, une cochette -->
+                                </div>
+                            </fieldset>
+                            <!-- </groupe de champs> -->
+                            <!-- un bouton pour envoyer le tout -->
+                        </form>
                     </article>
                 </main>
 
