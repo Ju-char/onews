@@ -1,5 +1,6 @@
 body {
     font-family: sans-serif;
+    overflow: hidden;
 }
 
 /* HELPERS */
@@ -38,7 +39,6 @@ section {
 
 #left-side {
     justify-content: space-between;
-    background-image: url('../images/nicole.jpg');
     /* va couvrir l'espace disponible dans la div avec l'image fournie sans la déformer */
     background-size: cover;
     background-position: center;
@@ -47,6 +47,16 @@ section {
     */
     color: white;
     padding: 3em 2em 1em 2em;
+
+    text-shadow: 1px 1px 3px black;
+}
+
+.nicole {
+    background-image: url('../images/nicole.jpg');
+}
+
+.gabriel {
+    background-image: url('../images/gabriel.jpg');
 }
 
 /* #left-side main {
@@ -72,6 +82,7 @@ section {
     align-items: flex-end;
     text-align: right;
     padding: 1.8em 1.1em;
+    box-shadow: .5px .5px 1px #aaa;
 }
 
 .news__title {
@@ -104,6 +115,13 @@ section {
 .menu__link {
     margin-left: 2em;
     font-size: 0.9em;
+    transition: .3s;
+}
+
+.menu__link:hover {
+    text-decoration: underline;
+    color: red;
+    text-shadow: .5px .5px 1px white;
 }
 
 /* RIGHT SIDE */
@@ -122,6 +140,7 @@ section {
     display: flex;
     flex-wrap: wrap;
     padding-right: .3em;
+    overflow-y: auto;
 }
 
 .article {
@@ -195,6 +214,10 @@ section {
     font-size: .8em;
     text-decoration: underline;
     transition: .3s;
+    /* l'article utilise la flexbox pour positionner ses éléments
+    dans le coup, le navigateur a accès à la hauteur totale d'un article
+    on peut utiliser cette faculté pour aligner tous les liens vers le détail des articles */
+    margin-top: auto;
 }
 
 .article__detail:hover {
