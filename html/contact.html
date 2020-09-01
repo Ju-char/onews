@@ -32,7 +32,7 @@
                 </header>
                 <main id="contact">
                     <article>
-                        <form id="form" action="">
+                        <form id="form" action="index.html">
                             <!-- il faudrait pouvoir grouper ces champs car ils traitent du même sujet -->
                             <!-- et "étiqueter" ce groupe : Identité -->
                             <fieldset>
@@ -41,23 +41,36 @@
                                     <p class="label">Je suis</p>
                                     <div class="input-group">
                                         <!-- ici, un petit bouton "switch" (l'un ou l'autre), celui-là serait coché par défaut -->
+                                        <input type="radio" id="civilite-2" name="civilite" value="femme" checked>
                                         <label for="civilite-2">une femme</label>
                                         <span>/</span>
                                         <!-- là, le deuxième -->
+                                        <input type="radio", id="civilite-1" name="civilite" value="homme">
                                         <label for="civilite-1">un homme</label>
                                     </div>
                                 </div>
                                 <div class="form-row">
                                     <label class="label" for="prenom">Mon prénom est </label>
                                     <!-- un champ texte tout bidon, mais avec Prénom écrit dedans -->
+                                    <input type="text" id="prenom" name="prenom" placeholder="Prénom">
                                 </div>
                                 <div class="form-row">
                                     <label class="label" for="nom">Et mon nom, </label>
                                     <!-- le même, avec Nom dedans -->
+                                    <input type="text" id="nom" name="nom" placeholder="Nom">
                                 </div>
                                 <div class="form-row">
                                     <label class="label" for="source">J'ai connu ce site grâce à </label>
                                     <!-- là, une petite liste de sources, mais faut pas que ça prenne trop de place, elle pourrait évoluer avec le temps -->
+                                    <select name="source" id="source">
+                                        <option value="">Choisir</option>
+                                        <option value="Facebook">Facebook</option>
+                                        <option value="Twitter">Twitter</option>
+                                        <option value="Google">Google</option>
+                                        <option value="Bouche à oreille">Bouche à oreille</option>
+                                        <option value="JT de 13h de Jean-Pierre Pernault">JT de 13h de Jean-Pierre Pernault</option>
+                                        <option value="Autre">Autre</option>
+                                    </select>
                                 </div>
                             </fieldset>
                             <!-- </groupe de champs> -->
@@ -68,14 +81,17 @@
                                 <div class="form-row">
                                     <label class="label" for="email">Répondez-moi via</label>
                                     <!-- un champ pour l'adresse e-mail (mais vraiment pour une adresse e-mail, faut pas qu'on puisse rentrer n'importe quoi dedans) -->
+                                    <input type="email" id="email" name="email" placeholder="Adresse e-mail">
                                 </div>
                                 <div class="form-row">
                                     <label class="label" for="message">Je voulais vous dire que</label>
                                     <!-- une belle zone de texte pour pouvoir nous écrire tout un roman 😍 -->
+                                    <textarea name="message" id="message" rows="5" placeholder="Votre message"></textarea>
                                 </div>
                                 <div class="form-row">
                                     <label class="label" for="file">Et vous montrer ça aussi</label>
                                     <!-- il parait qu'on peut envoyer des fichiers, make it happen -->
+                                    <input type="file" id="file" name="file">
                                 </div>
                             </fieldset>
                             <!-- </groupe de champs> -->
@@ -84,10 +100,12 @@
                                 <div class="form-row">
                                     <label class="label" for="info">Je certifie la véracité de ces informations.</label>
                                     <!-- là, une cochette -->
+                                    <input type="checkbox" id="info" name="info">
                                 </div>
                             </fieldset>
                             <!-- </groupe de champs> -->
                             <!-- un bouton pour envoyer le tout -->
+                            <button>Envoyer</button>
                         </form>
                     </article>
                 </main>
@@ -96,3 +114,8 @@
         </div>
     </body>
 </html>
+
+
+
+civilite=homme&prenom=Nico&nom=Charpin&source=Google&email=nico%40test&message=rô+le+beau+message&file=&info=on
+
