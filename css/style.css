@@ -1,0 +1,202 @@
+body {
+    font-family: sans-serif;
+}
+
+/* HELPERS */
+
+.redTest {
+    background-color: rgba(255, 0, 0, 0.5);
+}
+
+.greenTest {
+    background-color: rgba(0, 255, 0, 0.5);
+}
+
+.blueTest {
+    background-color: rgba(0, 0, 255, 0.5);
+}
+
+/* LAYOUT */
+
+#container {
+    display: flex;
+    /* par défaut, la direction est row, le justify-content est flex-start*/
+}
+
+section {
+    /* au chargement, le body a une largeur définie, on peut utiliser le % pour définir la largeur des sections */
+    width: 50%;
+    /* en recanche, au chargement, le body a une hauteur à 0. Pour que les sections prennent bien toute la hauteur disponible, on utilise la taille du viewport comme référence
+    100vh = 100% de la hauteur du viewport */
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+
+/* LEFT SIDE */
+
+#left-side {
+    justify-content: space-between;
+    background-image: url('../images/nicole.jpg');
+    /* va couvrir l'espace disponible dans la div avec l'image fournie sans la déformer */
+    background-size: cover;
+    background-position: center;
+    /* forme raccourcie 
+    background: url('../images/nicole.jpg') center/cover;
+    */
+    color: white;
+    padding: 3em 2em 1em 2em;
+}
+
+/* #left-side main {
+    /* avec cette instruction, le main prendra toute la place restante entre le header et le footer 
+    flex-grow: 1;
+} */
+
+#left-side .title {
+    text-transform: uppercase;
+    font-size: 1.8em;
+    font-weight: bold;
+    width: 100px;
+    padding-left: 50px;
+    background: url('../images/onews.svg') no-repeat;
+    background-size: 35px;
+    background-position: 0 5px;
+}
+
+.news {
+    background-color: rgba(255, 255, 255, 0.2);
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    text-align: right;
+    padding: 1.8em 1.1em;
+}
+
+.news__title {
+    font-size: 1.6em;
+    font-weight: bold;
+    padding-bottom: .5em;
+}
+
+.news__title::first-letter {
+    text-transform: capitalize;
+}
+
+.news__title span {
+    font-size: 0.9rem;
+    font-weight: normal;
+    font-style: italic;
+}
+
+.news__text {
+    width: 90%;
+    line-height: 1.4em;
+    font-size: 0.9rem;
+}
+
+.menu {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.menu__link {
+    margin-left: 2em;
+    font-size: 0.9em;
+}
+
+/* RIGHT SIDE */
+
+#right-side {
+    background-color: #f9f9f9;
+}
+
+#right-side .title {
+    font-size: 1.6em;
+    font-weight: bold;
+    padding: 1em;
+}
+
+#right-side main {
+    display: flex;
+    flex-wrap: wrap;
+    padding-right: .3em;
+}
+
+.article {
+    width: 50%;
+    background-color: #fff;
+    border: 1px solid #eaeaea;
+    box-sizing: border-box;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 1.6em;
+}
+
+.badge--news {
+    background-color: #98dc62;
+}
+
+.badge--team {
+    background-color: #dc5e53;
+}
+
+.badge--work {
+    background-color: #0766f0;
+}
+
+.article__badge {
+    border-radius: 3px;
+    color: white;
+    padding: .3em .5em;
+    font-size: .7em;
+    font-weight: bold;
+    text-transform: uppercase;
+    line-height: 1.3em;
+}
+
+.article__title {
+    font-size: 1.1em;
+    font-weight: bold;
+    padding: 1.3em 0;
+    line-height: 1.5em;
+}
+
+.article__meta {
+    font-size: .7em;
+}
+
+.meta__icon {
+    width: 25px;
+    /* cette propriété permet de gérer l'endroit où le texte va s'écrire par rapport à l'image*/
+    vertical-align: middle;
+}
+
+.meta__author {
+    font-weight: bold;
+    padding-left: .8em;
+}
+
+.meta__date {
+    color: #aaa;
+}
+
+.article__text {
+    line-height: 1.5em;
+    padding: 1em 0;
+    font-size: .9em;
+}
+
+.article__detail {
+    color: #007bff;
+    font-weight: bold;
+    font-size: .8em;
+    text-decoration: underline;
+    transition: .3s;
+}
+
+.article__detail:hover {
+    color: #0056b3;
+}
